@@ -1,4 +1,48 @@
-*_files/*
+# ---- Quarto ----------------------------------------------------------------
+/.quarto/
+/_site/
+/_freeze/
+*_files/
+
+# Rendered HTML is a local build artifact.
+# PDFs are NOT ignored -- hwNN.pdf is committed and linked from the course site.
+*.html
+
+# ---- LaTeX intermediates (from PDF rendering) ------------------------------
+*.tex
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Quarto emits these alongside unembedded HTML; *_files/ covers the usual case.
+# NOTE: this also hides a deliberate stylesheet -- use `git add -f` if you add one.
 *.css
 *.js
-*.tex
+
+# ---- Julia -----------------------------------------------------------------
+# Project.toml AND Manifest.toml are committed on purpose: the Manifest pins
+# exact versions so every student resolves the same environment.
+LocalPreferences.toml
+*.jl.cov
+*.jl.*.cov
+*.jl.mem
+/deps/build.log
+
+# ---- Jupyter / Python (Quarto's jupyter engine) ----------------------------
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+
+# ---- Editors and OS --------------------------------------------------------
+.DS_Store
+.Rproj.user/
+.Rhistory
+.vscode/
+.idea/
+*~
